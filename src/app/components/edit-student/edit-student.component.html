@@ -1,1 +1,81 @@
-<p>edit-student works!</p>
+# Add Student
+
+
+
+
+
+
+
+
+
+
+
+
+
+You must provide a**student name**
+
+
+
+
+
+
+You must provide a**student email**
+
+
+
+
+Section
+
+{{sectioinArray}}
+
+
+
+Section is required
+
+
+
+
+
+
+
+
+
+
+<mat-chip *ngFor="let subjectArray of subjectArray" [selectable]="selectable" [removable]="removable"
+(removed)="remove(subjectArray)">
+{{subjectArray.name}}
+cancel
+
+<input placeholder="Add subject" [matChipInputFor]="chipList"
+[matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur"
+(matChipInputTokenEnd)="add($event)">
+
+
+info
+
+
+
+
+<input matInput readonly [matDatepicker]="picker" placeholder="Date of birth" formControlName="dob"
+(dateChange)="formatDate($event)">
+
+
+
+Date of birth is required
+
+
+
+
+Gender:
+
+Male
+Female
+
+
+
+
+
+
+
+
+Update
